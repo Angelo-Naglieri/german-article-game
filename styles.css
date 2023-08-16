@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins&display=swap');
+
+:root {
+  /* FONTS */
+  --main-font: 'Poppins';
+  --heading-font: 'Inter';
+
+
+  /* COLORS */
+  /* Site colors */
+  --text-color: #000000;
+  --background-color: #ebf2fa;
+  --primary-color: #A2CFFB;
+  --secondary-color: #c5d9ed;
+  --accent-color: #2270bf;
+
+  /* Genus colors */
+  --blue: #6ccff6;
+  --red: #fab2c2;
+  --yellow: #f8e08c;
+  --green: #93e5ab;
+
+  /* Casus colors */
+  --purple: #e9adfa;
+  --orange: #ffd89c;
+  --pink: #ffe6e6;
+  --cyan: #b1bce6;
+
+
+  /* OTHER */
+  --gap-g: 25px;
+  --gap-m: 15px;
+  --gap-s: 10px;
+
+  --standart-border-radius: 5px;
+}
+
+
+
+/* REUSABLE STYLES */
+
+.page-title {
+  color: var(--accent-color);
+  font-family: var(--heading-font);
+  font-size: 45px;
+}
+
+.text {
+  color: var(--text-color);
+  font-family: var(--main-font), Verdana, Geneva, Tahoma, sans-serif;
+  font-size: larger;
+}
+
+.text-box, .input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  height: 40px;
+  border: 2px solid #000000;
+  border-radius: var(--standart-border-radius);
+}
+
+.input {
+  flex-grow: 1;
+  padding: 0px 10px;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--standart-border-radius);
+  cursor: pointer;
+}
+
+.submit-btn {
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent-color);
+}
+
+.info-icon {
+  height: 30px;
+  width: auto;
+}
+
+/*  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font);
+  color: var(--text-color);
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  padding: 30px;
+  background-color: var(--background-color);
+}
+
+/* INDEX.HTML */
+
+.index-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-g);
+}
+
+.index-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-s);
+  border: 2px solid currentColor;
+  border-radius: 30px;
+  color: var(--text-color);
+  transition: 0.2s;
+}
+.index-card:hover {
+  transform: scale(1.2);
+}
+
+#chat-icon {
+  color: var(--text-color);
+}
+
+/* ARTICLE.HTML */
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.quizz {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--gap-g);
+}
+
+.quizz-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-m);
+}
+
+.userGuess-section {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--gap-s);
+}
+
+.artInput-section {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.material-symbols-outlined {
+  color: white;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+#correctAnswer-textBox {
+  background-color: var(--answer-color, transparent);
+}
+
+.artInput-left {
+  text-align: left;
+}
+
+#resetArticle-btn {
+  width: fit-content;
+  height: fit-content;
+  padding: 15px 20px;
+  background-color: var(--accent-color);
+  color: white;
+  font-weight: bold;
+  align-self: center;
+}
+

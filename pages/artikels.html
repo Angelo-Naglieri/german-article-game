@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deutsch mit Angelo | Artikels</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+  <div class="container">
+    
+    <header>
+      <a href="../index.html"><h1 class="page-title">Artikel</h1></a>
+    </header>
+
+    <main>  
+      <div class="quizz">
+        <h2 class="quizz-title">Welcher Artikel passt?</h2>
+        
+        <form id="artType-form" class="quizz-section artInput-section">
+          <div class="artInput-left">
+            <div class="cbox-section">
+              <input class="cbox" type="checkbox" value="1" id="b-checkbox" checked>
+              <label class="cbox-label" for="b-checkbox">Bestimmte Artikel</label>
+            </div>
+  
+            <div class="cbox-section">
+              <input class="cbox" type="checkbox" value="1" id="unb-checkbox">
+              <label class="cbox-label" for="unb-checkbox">Unbestimmte Artikel</label>
+            </div>
+          </div>
+          
+          <div class="artInput-right">
+            <img src="../imgs/info-icon.png" alt="Info img" title="Select what types of article you want to study, your settings will be automatically saved and applied. Please be sure to write your answer in lower case." class="info-icon">
+          </div>  
+        </form>
+
+        <div class="question quizz-section">
+          <div class="question-section">
+            <p class="text">Type:</p>
+            <div class="text-box">
+              <p class="info-text" id="type-display"></p>
+            </div>
+          </div>
+
+          <div class="question-section">
+            <p class="text">Genus:</p>
+            <div class="text-box">
+              <p class="info-text" id="genus-display"></p>
+            </div>
+          </div>
+
+          <div class="question-section">
+            <p class="text">Casus:</p>
+            <div class="text-box">
+              <p class="info-text" id="casus-display"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="answer quizz-section">
+          <div class="answer-section">
+            <p class="text">Enter your guess:</p>
+            <div class="userGuess-section">
+              <input class="input" type="text" id="user-guess" placeholder="Type an article..." onfocus="inputSelected = true" onblur="inputSelected=false"> 
+              <button type="submit" class="btn submit-btn" id="answer-submit-btn" onclick="checkAnswer()">
+                <span class="material-symbols-outlined">
+                send</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="answer-section">
+            <p class="text">Correct answer:</p>
+            <div class="text-box" id="correctAnswer-textBox">
+              <p class="info-text" id="correct-answer"></p>
+            </div>
+          </div>
+        </div>
+        <button type="reset" class="btn" id="resetArticle-btn" onclick="getNewQuestion()">Next article</button>
+      </div>
+    </main>
+
+  </div>
+</body>
+<script src="../index.js"></script>
+
+</html>
